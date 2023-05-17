@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Container, Row, Col } from "react-bootstrap";
 
     
-/* function CardItem (cardInfo) {
+function CardItem ({cardInfo}) {
     return(
         <Container>
             <Row>
@@ -20,8 +20,8 @@ import { Card, Container, Row, Col } from "react-bootstrap";
             </Row>
         </Container>
     );
-} */
-
+}
+/* 
 const CardItem = ({title, text, image}) => {
     return(
         <Card style={{ width: '18rem' }}>
@@ -32,6 +32,6 @@ const CardItem = ({title, text, image}) => {
         </Card.Body>
       </Card>
     )
-}
+} */
 
 export default CardItem;

@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import CardItem from "./CardItem";
 
 const CardList = ({cardInfo}) => {
@@ -16,4 +16,4 @@ const elements = cardInfo.map(item => {
     )
 }
 
-export default CardList;
+export default CardList; */

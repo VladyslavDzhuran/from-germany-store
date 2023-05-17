@@ -1,6 +1,6 @@
 import './App.css';
 import NavigationBar from './components/NavigationBar';
-import CardList from './components/CardList';
+import CardItem from './components/CardItem'
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -19,7 +19,7 @@ function App() {
       <Row>
         <Col><NavigationBar/></Col>
       </Row> 
-      <CardList data={cardInfo}/>    
+      <CardItem data={cardInfo}/>    
     </Container>
   );
 }
