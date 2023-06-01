@@ -1,7 +1,8 @@
 import { useState } from "react";
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import Products from './components/Products';
+import { Home } from "./pages/Home";
+import { createBrowserRouter,Outlet, RouterProvider, ScrollRestoration } from 'react-router-dom';
 
 import { BrowserRouter } from 'react-router-dom';
 
@@ -17,16 +18,41 @@ const products = [
   {title: "nine", price: "550", category: "dishes", image: "https://family.ua/assets/cache/images/1000/images/catalog/50675/0972031001676644254.jpg"}
 ];
 
+const Layout = () => {
+  return<div>
+    <NavBar/>
+    <ScrollRestoration/>
+    <Outlet/>
+    <Footer/>
+  </div>
+}
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout/>,
+/*     children: [
+      {
+        path: '/',
+        element: <Home/>
+      }
+    ] */
+  }
+])
+
 function App() {
   const [productsInfo, setProductsInfo] = useState(products);
 
   return (
-    <BrowserRouter>
-      <NavBar/>
-      <Products products={productsInfo}/>
-      <Footer/>
-    </BrowserRouter>
+    <div className="app">
+      <RouterProvider router={router}/>
+    </div>
   );
 }
 
+{/* <BrowserRouter>
+<NavBar/>
+<Home products={productsInfo}/>
+<Footer/>
+</BrowserRouter> */}
 export default App;

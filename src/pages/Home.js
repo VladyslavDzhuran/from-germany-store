@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
-import NavBar from "../components/NavBar"
-import { Products } from "../components/Products"
+import Products from "../components/Products"
 
 const products = [
     {title: "one", price: "500", category: "dishes", image: "https://cdn.27.ua/799/f5/6a/914794_2.jpeg"},
@@ -14,7 +13,7 @@ const products = [
     {title: "nine", price: "550", category: "dishes", image: "https://family.ua/assets/cache/images/1000/images/catalog/50675/0972031001676644254.jpg"}
   ];
 
-export const Home = () => {
+export const Home = ({products}) => {
 
     const [productsInfo, setProductsInfo] = useState(products);
 /*     const data = useLoaderData() */
@@ -25,9 +24,7 @@ export const Home = () => {
   
     return (
       <div>
-        <NavBar/>
         <Products products={productsInfo}/>
-  
       </div>
     )
   }
